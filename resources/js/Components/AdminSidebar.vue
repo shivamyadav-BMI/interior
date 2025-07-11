@@ -38,12 +38,20 @@
           <!-- <h4 class="text-xs uajskeiolksb text-neutral-500 dark:text-neutral-100 compact-hide">Dashboard</h4> -->
           <ul class="w-full compact-menu">
             <li>
-              <a href=""
+              <Link href="/admin/dashboard"
                 class="[&.active]:bg-white/90 [&.active]:shadow-sm dark:[&.active]:bg-neutral-500/40 [&.active]:backdrop-opacity-95 flex gap-2 layhetgsjdcb py-2.5 px-5 font-medium hover:backdrop-blur hover:backdrop-saturate-150 hover:bg-white/90 dark:hover:bg-neutral-500/40 hover:shadow-xs boalstehwqbj mb-1">
 
-                <LayoutDashboard />
+                <Component />
                 <span class="compact-hide">Dashboard</span>
-              </a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/admin/categories"
+                class="[&.active]:bg-white/90 [&.active]:shadow-sm dark:[&.active]:bg-neutral-500/40 [&.active]:backdrop-opacity-95 flex gap-2 layhetgsjdcb py-2.5 px-5 font-medium hover:backdrop-blur hover:backdrop-saturate-150 hover:bg-white/90 dark:hover:bg-neutral-500/40 hover:shadow-xs boalstehwqbj mb-1">
+
+               <LeafyGreen />
+                <span class="compact-hide">Categories</span>
+              </Link>
             </li>
 
           </ul>
@@ -62,7 +70,8 @@
 </template>
 
 <script setup>
-import { LayoutDashboard } from 'lucide-vue-next';
+import { Link } from '@inertiajs/vue3';
+import { Component, LayoutDashboard, LeafyGreen } from 'lucide-vue-next';
 
 // Props, imports, logic go here
 </script>

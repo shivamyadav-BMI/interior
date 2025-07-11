@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\AdminSessionController;
 use App\Models\User;
@@ -12,8 +13,9 @@ Route::prefix('/admin')->middleware('guest')->group(function(){
     Route::post('/login', [AdminSessionController::class, 'store'])->name('admin.login.store')->middleware(HandlePrecognitiveRequests::class);
 
 });
-Route::prefix('/admin')->group(function(){
-    Route::get('/dashboard', [AdminDashboardController::class, 'index'])->middleware('role:admin')->name('admin.dashboard');
+Route::prefix('/admin')->name('admin.')->middleware('role:admin,superadmin')->group(function(){
+    Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
+    Route::resource('/categories', AdminCategoryController::class);
 
 
 });
