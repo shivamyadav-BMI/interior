@@ -7,6 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class Project extends Model
 {
     protected $fillable = [
-        'name'
+        'category_id',
+        'title',
+        'location',
+        'film_type',
+        'description',
+        'image'
     ];
 }

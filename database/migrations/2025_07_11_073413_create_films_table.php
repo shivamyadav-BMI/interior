@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('films', function (Blueprint $table) {
             $table->id();
             $table->foreignId('category_id')->constrained()->cascadeOnDelete();
-             $table->string('name')->unique()->index();
+            $table->string('name')->unique()->index();
             $table->string('slug')->unique()->index();
             $table->text('description');
             $table->string('uv_rejection');
