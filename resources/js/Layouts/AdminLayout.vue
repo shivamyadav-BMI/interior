@@ -9,7 +9,7 @@
 
 <script setup>
 // Props, imports, logic go here
-import AdminHeader from '@components/AdminHeader.vue'
-import AdminSidebar from '@components/AdminSidebar.vue'
+import AdminHeader from '@Components/AdminHeader.vue'
+import AdminSidebar from '@Components/AdminSidebar.vue'
 
 </script>
