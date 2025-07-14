@@ -12,10 +12,7 @@
       @input="$emit('update:modelValue', $event.target.value)"
       @change="onChange"
       :class="[
-        'w-full px-3 py-2 rounded-sm border focus:outline-none focus:ring-0',
-        'bg-white/20 dark:bg-neutral-400/40',
-        'border-black/10 dark:border-white/30',
-        'focus:border-purple-500 dark:focus:border-purple-300',
+        'py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-600 focus:ring-0',
         invalid ? 'border-red-500' : '',
       ]"
     />

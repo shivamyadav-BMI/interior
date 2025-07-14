@@ -1,6 +1,6 @@
 <template>
   <AdminLayout>
-    
+ss
   </AdminLayout>
 </template>
 

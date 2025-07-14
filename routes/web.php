@@ -8,7 +8,7 @@ use Illuminate\Foundation\Http\Middleware\HandlePrecognitiveRequests;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-Route::prefix('/admin')->middleware('guest')->group(function(){
+Route::prefix('/admin')->middleware('auth')->group(function(){
     Route::get('/login', [AdminSessionController::class, 'index'])->name('admin.login');
     Route::post('/login', [AdminSessionController::class, 'store'])->name('admin.login.store')->middleware(HandlePrecognitiveRequests::class);
 

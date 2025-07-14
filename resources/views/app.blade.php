@@ -6,34 +6,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- styles -->
-    <link rel="stylesheet" href="https://glassmorp.tailwinddashboard.com/src/css/style.css">
-
-    <link rel="icon" type="image/png" sizes="32x32" href="https://glassmorp.tailwinddashboard.com/src/img/favicon.png">
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet">
-    <!-- local icons -->
-    <link rel="stylesheet" id="icons"
-        href="https://glassmorp.tailwinddashboard.com/vendors/bootstrap-icons/font/bootstrap-icons.min.css">
+    <!-- Favicon icon-->
+    <link rel="shortcut icon" type="image/png"
+        href="https://bootstrapdemos.adminmart.com/modernize-tailwind-free/dist/assets/images/logos/favicon.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
+    <!-- Core Css -->
+    <link rel="stylesheet"
+    href="https://bootstrapdemos.adminmart.com/modernize-tailwind-free/dist/assets/css/theme.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     @vite('resources/js/app.js')
     @inertiaHead
 </head>
 
-<body x-data="{ sidebar: false }" :class="{ 'layout-compact': sidebar, '': !(sidebar) }"
-    class="font-sans text-sm text-neutral-700 dark:text-neutral-100 bg-purple-300 dark:bg-neutral-700 bg-cover bg-fixed bg-center bg-[url('https://glassmorp.tailwinddashboard.com/img/bg.jpg')] dark:bg-[url('https://glassmorp.tailwinddashboard.com/img/bg-dark.jpg')]">
+<body
+   >
 
     @inertia
 </body>
-<!-- Alpine Plugins -->
-<script defer src="https://glassmorp.tailwinddashboard.com/vendors/@alpinejs/collapse/dist/cdn.min.js"></script>
 
-<!-- Alpine Core -->
-{{-- <script defer src="https://glassmorp.tailwinddashboard.com/vendors/alpinejs/dist/cdn.min.js"></script> --}}
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-<script src="https://glassmorp.tailwinddashboard.com/src/js/switch-dark.js"></script>
+{{-- <script src="https://bootstrapdemos.adminmart.com/modernize-tailwind-free/dist/assets/libs/jquery/dist/jquery.min.js">
+</script> --}}
+{{-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> --}}
+{{-- <script
+    src="https://bootstrapdemos.adminmart.com/modernize-tailwind-free/dist/assets/libs/simplebar/dist/simplebar.min.js">
+</script>
+<script
+    src="https://bootstrapdemos.adminmart.com/modernize-tailwind-free/dist/assets/libs/iconify-icon/dist/iconify-icon.min.js">
+</script>
+<script src="https://bootstrapdemos.adminmart.com/modernize-tailwind-free/dist/assets/libs/preline/dist/preline.js">
+</script>
+<script src="https://bootstrapdemos.adminmart.com/modernize-tailwind-free/dist/assets/libs/@preline/dropdown/index.js">
+</script>
+<script src="https://bootstrapdemos.adminmart.com/modernize-tailwind-free/dist/assets/libs/@preline/overlay/index.js">
+</script>
+<script src="https://bootstrapdemos.adminmart.com/modernize-tailwind-free/dist/assets/js/sidebarmenu.js"></script> --}}
 
-<!--start::Vendor javascript (only on this page)-->
-<script src="https://glassmorp.tailwinddashboard.com/vendors/chart.js/dist/chart.umd.js"></script><!-- charts -->
-<script src="https://glassmorp.tailwinddashboard.com/src/js/charts/chart-config.js"></script><!-- chart config -->
+
+
+{{-- <script
+    src="https://bootstrapdemos.adminmart.com/modernize-tailwind-free/dist/assets/libs/apexcharts/dist/apexcharts.min.js">
+</script> --}}
+{{-- <script src="https://bootstrapdemos.adminmart.com/modernize-tailwind-free/dist/assets/js/dashboard.js"></script> --}}
 
 </html>
