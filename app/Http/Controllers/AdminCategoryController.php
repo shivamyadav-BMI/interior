@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
@@ -12,7 +13,11 @@ class AdminCategoryController extends Controller
      */
     public function index()
     {
-        return Inertia::render('Admin/Categories/Index');
+        $categories = Category::with('projects')->paginate(10);
+        dd($categories);
+        return Inertia::render('Admin/Categories/Index',[
+            'categories' => $categories
+        ]);
     }
 
     /**
@@ -28,7 +33,17 @@ class AdminCategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required|min:3'
+        ]);
+
+        Category::create([
+            'name' => $request->name,
+            'slug' => str()->slug($request->name)
+        ]);
+
+        session()->flash('success', 'Category has been created.');
+        return to_route('admin.dashboard');
     }
 
     /**

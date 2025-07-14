@@ -1,6 +1,6 @@
 <template>
   <div class="mb-4">
-    <label :for="id" class="mb-2 block text-sm font-medium text-gray-700 dark:text-white">
+    <label :for="id" class="mb-2 block text-sm font-medium text-gray-700 dark:text-white uppercase">
       {{ label }}
     </label>
 

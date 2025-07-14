@@ -248,19 +248,19 @@
                                                         scope="col"
                                                         class="text-left rtl:text-right p-4 font-semibold text-dark dark:text-white text-sm"
                                                     >
-                                                        Email
+                                                        Projects
                                                     </th>
                                                     <th
                                                         scope="col"
                                                         class="text-left rtl:text-right p-4 font-semibold text-dark dark:text-white text-sm"
                                                     >
-                                                        Location
+                                                        Created At
                                                     </th>
                                                     <th
                                                         scope="col"
                                                         class="text-left rtl:text-right p-4 font-semibold text-dark dark:text-white text-sm"
                                                     >
-                                                        Phone
+                                                        Updated At
                                                     </th>
                                                     <th
                                                         scope="col"
@@ -274,7 +274,7 @@
                                                 class="divide-y divide-border dark:divide-darkborder"
                                             >
 
-                                                <tr class="search-items">
+                                                <tr v-for="category in categories.data" :key="category.id" class="search-items">
                                                     <td
                                                         class="p-4 ps-0 whitespace-nowrap"
                                                     >
@@ -392,6 +392,10 @@
 import { Plus } from "lucide-vue-next";
 import NavigationLink from "../../../Components/ui/NavigationLink.vue";
 import AdminLayout from "../../../Layouts/AdminLayout.vue";
-import { Link } from "@inertiajs/vue3";
+import { Link, usePage } from "@inertiajs/vue3";
+import { computed } from "vue";
+
 // Props, imports, logic go here
+const page = usePage();
+const categories = computed(() => page.props.categories);
 </script>
